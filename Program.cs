@@ -6,7 +6,7 @@
         Product product = new Product();
         product.description = "Banana";
         product.price = 1.99F;
-        product.quantity = 1;
+        product.quantity = 0;
         Console.WriteLine("The {0} costs ${1} and {2}.", product.description, product.price, product.inStock());
         Console.ReadLine();
     }
