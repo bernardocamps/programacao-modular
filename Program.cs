@@ -1,37 +1,41 @@
-﻿using System;
-
-class MainClass 
+﻿class MainClass 
 {
-    private static void Task1()
+    private static void Banana()
     {
         Console.Clear();
-        Console.WriteLine("Running Task 1.");
+        Product product = new Product();
+        product.description = "Banana";
+        product.price = 1.99F;
+        product.quantity = 1;
+        Console.WriteLine("The {0} costs ${1} and {2}.", product.description, product.price, product.inStock());
         Console.ReadLine();
     }
 
-    private static void Task2()
+    private static void Apple()
     {
         Console.Clear();
-        Console.WriteLine("Running Task 2.");
+        Product product = new Product("Apple", 2.99F, 2);
+        Console.WriteLine("The {0} costs ${1} and {2}.", product.description, product.price, product.inStock());
         Console.ReadLine();
     }
 
     private static bool MainMenu()
     {
         Console.Clear();
+        Console.WriteLine("Welcome!");
         Console.WriteLine("Choose an option:");
-        Console.WriteLine("1. Run Task 1.");
-        Console.WriteLine("2. Run Task 2.");
+        Console.WriteLine("1. Banana");
+        Console.WriteLine("2. Apple");
         Console.WriteLine("3. Exit");
         Console.Write("\r\nOption: ");
 
-        switch (Console.ReadLine())     
+        switch (Console.ReadLine())
         {
             case "1":
-                Task1();
+                Banana();
                 return true;
             case "2":
-                Task2();
+                Apple();
                 return true;
             case "3":
                 return false;    
